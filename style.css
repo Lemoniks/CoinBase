@@ -147,16 +147,16 @@ body {
   box-shadow: 0px 0px 15px 19px rgba(253, 116, 155, 0.57);
 }
 .hero {
-  background: url('image/test-bg.png');
+  background: url("image/test-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
 }
 .hero:after {
-  content: '';
+  content: "";
   display: block;
-  background: url('image/test-bg-after.png');
+  background: url("image/test-bg-after.png");
   background-repeat: no-repeat;
   background-size: 100%;
   height: 250px;
@@ -204,7 +204,6 @@ body {
 }
 .hero-pic {
   margin-top: 56px;
-
 }
 .hero-description {
   margin-right: 73px;
@@ -271,8 +270,8 @@ body {
   height: 100%;
 }
 .price:after {
-  content:'';
-  background: url('image/test-bg-after.png');
+  content: "";
+  background: url("image/test-bg-after.png");
   display: block;
   background-repeat: no-repeat;
   background-size: 100%;
@@ -280,8 +279,8 @@ body {
   margin-top: 50px;
 }
 .price:before {
-  content:'';
-  background: url('image/test-bg-after.png');
+  content: "";
+  background: url("image/test-bg-after.png");
   transform: rotate(180deg);
   display: block;
   background-repeat: no-repeat;
@@ -442,12 +441,16 @@ body {
   height: 100%;
   padding-top: 129px;
   padding-bottom: 142px;
+  position: relative;
+  z-index: 0;
 }
 .trade-section {
   text-align: center;
   background-color: #fff;
   box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
+  position: relative;
+  z-index: 1;
 }
 .trade-title {
   font-style: normal;
@@ -494,16 +497,7 @@ body {
   line-height: 24px;
   text-align: center;
   background: #ffffff;
-  box-shadow: 0 0 6px 0 rgba(157, 96, 212, 0.5);
-  border: solid 1px transparent;
-  background-image: linear-gradient(
-      rgba(255, 255, 255, 0),
-      rgba(255, 255, 255, 0)
-    ),
-    linear-gradient(to bottom, #fd749b, #281ac8);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #fff inset;
+  position: relative;
   border-radius: 20px;
   cursor: pointer;
   margin-bottom: 85px;
@@ -527,6 +521,9 @@ body {
   margin-bottom: 50px;
   width: 55px;
   height: 55px;
+}
+.blog {
+  margin-bottom: 100px;
 }
 .blog-section {
   display: flex;
@@ -767,4 +764,84 @@ body {
   font-weight: normal;
   font-size: 12px;
   line-height: 18px;
+}
+.chat {
+  background: url("image/Testimonials.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+}
+.chat::after {
+  content: "";
+  background: url("image/test-bg-after.png");
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 250px;
+  margin-top: 125px;
+}
+.chat:before {
+  content: "";
+  background: url("image/test-bg-after.png");
+  transform: rotate(180deg);
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 250px;
+  margin-bottom: 125px;
+}
+.chat-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.chat-title {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  max-width: 327px;
+  text-align: center;
+  padding-bottom: 28px;
+}
+.chat-title:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 7px;
+  border-radius: 100px;
+  background: #fd749b;
+  margin: 28px auto 45px auto;
+}
+.chat-subtitle {
+  color: #ffffff;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  max-width: 542px;
+}
+.chat-example {
+  margin-top: 245px;
+  width: 488px;
+  height: 116px;
+  background: #fff;
+  border-radius: 15px;
+  position: relative;
+}
+.chat-example:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -25px;
+  width: 0;
+	height: 0;
+	border-top: 45px solid transparent;
+	border-right: 45px solid #fff;
+	border-bottom: 45px solid transparent;
 }
