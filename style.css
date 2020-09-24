@@ -60,8 +60,17 @@ body {
 }
 .header {
   background-color: #fff;
-  padding-top: 37px;
-  padding-bottom: 43px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  z-index: 99;
+  width: 100%;
+  transition: all 0.4s;
+}
+.changepad {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(238, 243, 236, 1);
 }
 .nav-headrer {
   display: flex;
@@ -111,21 +120,60 @@ body {
 .blog-link {
   margin-right: 68px;
 }
-.change_sell {
-  margin-right: 51px;
-  font-weight: bold;
+.header-dropdown {
+  position: relative;
+  margin: 0 40px 0 0;
+  margin-left: auto;
+}
+.header-btn {
   font-size: 14px;
   line-height: 21px;
-  text-align: center;
-  font-family: "Poppins", sans-serif;
-  background-color: #fff;
-  border: none;
-  appearance: none;
-  background-image: url("image/arrow_sell.png");
-  background-position: right;
-  background-repeat: no-repeat;
-  padding-right: 15px;
+  font-weight: 700;
+  color: #333333;
+  background-color: transparent;
+  padding: 0 12px 0 0;
+  position: relative;
+}
+.header-btn:after {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 6px;
+  background: url("image/arrow_sell.png") no-repeat;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.header-sell {
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  position: absolute;
+  top: 15px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  background: #fff;
+  transition: opacity 0.3s, top 0.4s, visibility 0.3s;
+}
+.header-sell-active {
+  top: 30px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header-item {
+  display: block;
+  font-size: 15px;
+  line-height: 18px;
+  padding: 5px 10px;
   cursor: pointer;
+}
+.header-item:hover {
+  color: #fff;
+  background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
 }
 
 .btn-login {
@@ -152,6 +200,7 @@ body {
   background-repeat: no-repeat;
   width: 100%;
   height: 100%;
+  padding-top: 95px;
 }
 .hero:after {
   content: "";
@@ -161,14 +210,6 @@ body {
   background-size: 100%;
   height: 250px;
 }
-/* .hero {
-  background: url("image/hero-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-} */
-
 .hero-section {
   display: flex;
   align-items: center;
@@ -513,7 +554,15 @@ body {
   border-radius: 20px;
   z-index: -1;
 }
-
+.btn-trade:hover {
+  font-size: 18px;
+  box-shadow: 1px 2px 18px 9px rgba(0, 0, 0, 0.75);
+}
+.btn-trade:hover .logo-btn-trade {
+  width: 75px;
+  height: 75px;
+  margin-bottom: 40px;
+}
 .btn-trade-bitcoin {
   margin-right: 60px;
 }
@@ -772,13 +821,13 @@ body {
   width: 100%;
   height: 100%;
 }
-.chat::after {
+.chat:after {
   content: "";
   background: url("image/test-bg-after.png");
   display: block;
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 250px;
+  height: 200px;
   margin-top: 125px;
 }
 .chat:before {
@@ -788,7 +837,7 @@ body {
   display: block;
   background-repeat: no-repeat;
   background-size: 100%;
-  height: 250px;
+  height: 200px;
   margin-bottom: 125px;
 }
 .chat-section {
@@ -825,23 +874,206 @@ body {
   font-size: 16px;
   line-height: 40px;
   max-width: 542px;
+  margin-bottom: 500px;
 }
 .chat-example {
-  margin-top: 245px;
-  width: 488px;
-  height: 116px;
+  margin-right: -450px;
   background: #fff;
   border-radius: 15px;
+  padding: 10px;
+  position: relative;
+  opacity: 0.5;
+}
+.triangle-bg-xxs,
+.triangle-bg-xxs:before,
+.triangle-bg-xxs:after {
+  width: 38px;
+  height: 38px;
+}
+.triangle-bg-xxs {
+  overflow: hidden;
+  position: absolute;
+  top: 5px;
+  left: -32px;
+  border-radius: 20%;
+  transform: translateY(50%) rotate(180deg) skewY(30deg) scaleX(0.866);
+}
+.triangle-bg-xxs:before,
+.triangle-bg-xxs:after {
+  content: "";
+  position: absolute;
+  background: white;
+  pointer-events: auto;
+}
+.triangle-bg-xxs:before {
+  border-radius: 20% 20% 20% 53%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
+    skewX(30deg) scaleY(0.866) translateX(-24%);
+}
+.triangle-bg-xxs:after {
+  border-radius: 20% 20% 53% 20%;
+  transform: scaleX(1.155) skewY(-30deg) rotate(-30deg) translateY(-42.3%)
+    skewX(-30deg) scaleY(0.866) translateX(24%);
+}
+.title-pic {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.example-title {
+  color: #333333;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 25px;
+}
+.ex-stars {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 7px;
+}
+.star {
+  height: 12px;
+  width: 12px;
+  background: url("image/Star.svg");
+  margin-right: 5px;
+}
+.example-subtitle {
+  color: #333333;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 20px;
+}
+.example-text {
+  color: #333333;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 20px;
+  margin-right: 80px;
+}
+.source {
+  text-align: center;
+}
+.app-source {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.title-source {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 65px;
+  background-image: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 20px;
+}
+.title-source:after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 7px;
+  border-radius: 100px;
+  background: #fd749b;
+  margin: 0 auto;
+}
+.text-source {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 40px;
+  max-width: 378px;
+  margin-bottom: 30px;
+}
+.logos-source {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logos-source a:first-child {
+  margin-right: 10px;
+}
+.logo-appstore {
+  width: 85px;
+  height: 36px;
+}
+.logo-googleplay {
+  width: 98px;
+  height: 28px;
+}
+.device {
+  padding-top: -300px;
+  background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
+  height: 660px;
+
+}
+.device:before {
+  content: "";
+  background: url("image/test-bg-after.png");
+  transform: rotate(180deg);
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 200px;
+  margin-bottom: 125px;
+}
+.device-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+.first-pic-device {
+  margin-right: 25px;
+}
+.subscribe-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 90px;
+}
+.subscribe-title {
+  margin-bottom: 50px;
+}
+.subscribe-text {
+  text-align: center;
+  max-width: 370px;
+  margin-bottom: 75px;
+}
+.email {
+  display: inline-block;
+  margin-right: 10px;
+  width: 388px;
+  height: 54px;
+  padding: 10px;
+  /* border: none; */
+  border-image: linear-gradient(to bottom, #fd749b, #281ac8);
+  border-width: 2px;
+  border-image-slice: 1; 
+  border-radius: 100px;
   position: relative;
 }
-.chat-example:after {
-  content: '';
+/* .email:before {
+  content: "";
   position: absolute;
-  top: 0;
-  left: -25px;
-  width: 0;
-	height: 0;
-	border-top: 45px solid transparent;
-	border-right: 45px solid #fff;
-	border-bottom: 45px solid transparent;
+  top: 50px;
+  bottom: 50px;
+  left: 50px;
+  right: 50px;
+  background: linear-gradient(to bottom, #fd749b, #281ac8);
+  border-radius: 20px;
+  z-index: 1;
+}  */
+.btn-subscribe {
+  width: 157px;
+  height: 54px;
+  text-align: center;
+  padding: 17px 33px;
 }
