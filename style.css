@@ -542,6 +542,7 @@ body {
   border-radius: 20px;
   cursor: pointer;
   margin-bottom: 85px;
+  transition: all 0.3s;
 }
 .btn-trade:before {
   content: "";
@@ -1009,8 +1010,7 @@ body {
 .device {
   padding-top: -300px;
   background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
-  height: 660px;
-
+  position: relative;
 }
 .device:before {
   content: "";
@@ -1022,12 +1022,26 @@ body {
   height: 200px;
   margin-bottom: 125px;
 }
+.device:after {
+  content: "";
+  background: #fff;
+  display: block;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+}
 .device-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 100px;
+  position: relative;
+  z-index: 2;
 }
 .first-pic-device {
   margin-right: 25px;
@@ -1053,27 +1067,125 @@ body {
   width: 388px;
   height: 54px;
   padding: 10px;
-  /* border: none; */
   border-image: linear-gradient(to bottom, #fd749b, #281ac8);
   border-width: 2px;
-  border-image-slice: 1; 
-  border-radius: 100px;
-  position: relative;
+  border-image-slice: 1;
 }
-/* .email:before {
-  content: "";
-  position: absolute;
-  top: 50px;
-  bottom: 50px;
-  left: 50px;
-  right: 50px;
-  background: linear-gradient(to bottom, #fd749b, #281ac8);
-  border-radius: 20px;
-  z-index: 1;
-}  */
 .btn-subscribe {
   width: 157px;
   height: 54px;
   text-align: center;
   padding: 17px 33px;
+}
+footer {
+  background-color: #333333;
+  color: #fff;
+  padding-top: 80px;
+  padding-right: 50px;
+  padding-left: 80px;
+}
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+}
+.logo-footer {
+  width: 112px;
+  height: 22px;
+  margin-bottom: 34px;
+}
+.footer-text {
+  max-width: 369px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 18px;
+}
+.gplus,
+.facebook,
+.twitter {
+  margin-right: 10px;
+}
+.title-footer, .title-instagram {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  margin-bottom: 30px;
+}
+.coinbase-links {
+  display: flex;
+  flex-direction: column;
+}
+.coinbase-link {
+  text-decoration: none;
+  color: #A2A2A2;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 30px;
+}
+.contact-phone, .contact-email, .contact-address, .download-us {
+  color: #A2A2A2;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 24px;
+}
+.contact-address {
+  margin-bottom: 73px;
+}
+
+.instagram-section {
+  max-width: 310px;
+}
+.instagram-pics {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.instagram-pic {
+  width: 70px;
+  height: 70px;
+  background: #A2A2A2;
+  margin-bottom: 10px;
+  position: relative;
+  cursor: pointer;
+}
+.instagram-pic > span {
+  height: 2px;
+  width: 30px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+.instagram-pic > span:before {
+  content: '';
+  height: 2px;
+  width: 30px;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -1px;
+  margin-left: -15px;
+  transform: rotate(90deg);
+}
+.instagram-pic:hover span {
+  display: block;
+
+}
+.copyright {
+  display: flex;
+  justify-content: start;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
+  color: #989898;
+  opacity: 0.4;
+  margin-top: 44px;
 }
