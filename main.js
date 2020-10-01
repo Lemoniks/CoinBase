@@ -14,3 +14,9 @@ $(window).scroll(function () {
   else
     $('.header').removeClass('changepad');
 });
+
+document.querySelector(".wrapper").onclick = function () {
+  document.querySelector(".burger").classList.toggle("burger_active");
+  document.querySelector(".nav-headrer").classList.toggle("nav-headrer-active");
+  document.querySelector(".content").classList.toggle("content-active");
+};

@@ -46,17 +46,14 @@ address {
 * {
   box-sizing: border-box;
 }
-img {
-  max-width: 100%;
-}
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
 }
 .container {
-  width: 90%;
-  max-width: 1370px;
-  margin: auto;
+  padding: 0 10px;
+  max-width: 1390px;
+  margin: 0px auto;
 }
 .header {
   background-color: #fff;
@@ -67,6 +64,7 @@ body {
   width: 100%;
   transition: all 0.4s;
 }
+
 .changepad {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -77,12 +75,13 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.logo-nav {
-  margin-right: 270px;
+.wrapper  {
+  display: none;
 }
-.header-links {
+.header-section-links {
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 .header-link {
   list-style-type: none;
@@ -118,7 +117,12 @@ body {
 .home-link,
 .about-link,
 .blog-link {
-  margin-right: 68px;
+  margin-right: 50px;
+}
+.header-section-btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .header-dropdown {
   position: relative;
@@ -195,20 +199,14 @@ body {
   box-shadow: 0px 0px 15px 19px rgba(253, 116, 155, 0.57);
 }
 .hero {
-  background: url("image/test-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  padding-top: 95px;
+  background: linear-gradient(174.48deg, #FD749B -12.41%, #281AC8 88.56%);
+  padding-top: 60px;
 }
 .hero:after {
   content: "";
   display: block;
-  background: url("image/test-bg-after.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 250px;
+  background: url("image/test-bg-after.png") no-repeat center/cover;
+  height: 275px;
 }
 .hero-section {
   display: flex;
@@ -247,19 +245,26 @@ body {
   margin-top: 56px;
 }
 .hero-description {
-  margin-right: 73px;
+  flex-basis: 50%;
 }
-
+.hero-pic-section {
+  flex-basis: 50%;
+}
 .welcome {
-  margin-top: 72px;
+  padding-top: 72px;
 }
 .welcome-section {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+.welcome-pic {
+  flex-basis: 50%;
+  width: 100%;
+  height: auto;
+}
 .welcome-description {
-  display: flex;
+  flex-basis: 50%;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -304,44 +309,33 @@ body {
   cursor: pointer;
 }
 .price {
-  background: url("image/test-bg.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(174.48deg, #FD749B -12.41%, #281AC8 88.56%);
 }
 .price:after {
   content: "";
-  background: url("image/test-bg-after.png");
   display: block;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 250px;
+  background: url("image/test-bg-after.png") no-repeat center/cover;
+  height: 275px;
   margin-top: 50px;
 }
 .price:before {
   content: "";
-  background: url("image/test-bg-after.png");
-  transform: rotate(180deg);
   display: block;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 250px;
+  background: url("image/test-bg-after.png") no-repeat center/cover;
+  height: 275px;
+  transform: rotate(180deg);
   margin-bottom: 50px;
 }
 
 .price-section {
+  padding: 50px ;
   background-color: #fff;
   box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
 }
-.price-titles {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  border-bottom: 1px solid #bbbbbb;
-}
 .price-title {
+  text-align: center;
+  padding-bottom: 20px;
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -349,14 +343,12 @@ body {
   background-image: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  border-bottom: 1px solid #bbbbbb;
 }
 .last-exchang {
   display: flex;
-  justify-content: flex-end;
-  margin-top: 24px;
-  margin-right: 100px;
+  justify-content: center;
   margin-bottom: 12px;
 }
 .btn-last-exchange {
@@ -375,11 +367,11 @@ body {
 .omg-section {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
 }
 .rates-values {
   display: flex;
   flex-direction: column;
+  flex-basis: 33.33333%;
 }
 .section-rates {
   display: flex;
@@ -474,6 +466,12 @@ body {
   text-align: center;
   cursor: pointer;
 }
+.experienc-pic {
+  flex-basis: 50%;
+  width: 100%;
+  height: auto;
+}
+
 .trade {
   background: url("image/bg-trade.png");
   background-size: cover;
@@ -815,30 +813,25 @@ body {
   font-size: 12px;
   line-height: 18px;
 }
+
 .chat {
-  background: url("image/Testimonials.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
 }
 .chat:after {
   content: "";
-  background: url("image/test-bg-after.png");
   display: block;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 200px;
+  background: url("image/test-bg-after.png") no-repeat center/cover;
+  height: 275px;
+  margin-top: 50px;
   margin-top: 125px;
 }
 .chat:before {
   content: "";
-  background: url("image/test-bg-after.png");
-  transform: rotate(180deg);
   display: block;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 200px;
+  background: url("image/test-bg-after.png") no-repeat center/cover;
+  height: 275px;
+  margin-top: 50px;
+  transform: rotate(180deg);
   margin-bottom: 125px;
 }
 .chat-section {
@@ -875,15 +868,28 @@ body {
   font-size: 16px;
   line-height: 40px;
   max-width: 542px;
-  margin-bottom: 500px;
+  margin-bottom: 34px;
+}
+.chat-bubles {
+  background: url('image/bubbles.png') no-repeat center;
+  height: 390px;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
 }
 .chat-example {
-  margin-right: -450px;
+  max-width: 450px;
   background: #fff;
   border-radius: 15px;
   padding: 10px;
   position: relative;
+  top: 200px;
+  right: 80px;
   opacity: 0.5;
+  position: absolute;
+
 }
 .triangle-bg-xxs,
 .triangle-bg-xxs:before,
@@ -1007,6 +1013,7 @@ body {
   width: 98px;
   height: 28px;
 }
+
 .device {
   padding-top: -300px;
   background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
@@ -1014,12 +1021,10 @@ body {
 }
 .device:before {
   content: "";
-  background: url("image/test-bg-after.png");
-  transform: rotate(180deg);
   display: block;
-  background-repeat: no-repeat;
-  background-size: 100%;
-  height: 200px;
+  background: url("image/test-bg-after.png") no-repeat center/cover;
+  height: 275px;
+  transform: rotate(180deg);
   margin-bottom: 125px;
 }
 .device:after {
@@ -1106,7 +1111,8 @@ footer {
 .twitter {
   margin-right: 10px;
 }
-.title-footer, .title-instagram {
+.title-footer,
+.title-instagram {
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -1119,18 +1125,21 @@ footer {
 }
 .coinbase-link {
   text-decoration: none;
-  color: #A2A2A2;
+  color: #a2a2a2;
   font-style: normal;
   font-weight: normal;
   font-size: 12px;
   line-height: 30px;
 }
-.contact-phone, .contact-email, .contact-address, .download-us {
-  color: #A2A2A2;
-font-style: normal;
-font-weight: normal;
-font-size: 12px;
-line-height: 24px;
+.contact-phone,
+.contact-email,
+.contact-address,
+.download-us {
+  color: #a2a2a2;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 24px;
 }
 .contact-address {
   margin-bottom: 73px;
@@ -1147,7 +1156,7 @@ line-height: 24px;
 .instagram-pic {
   width: 70px;
   height: 70px;
-  background: #A2A2A2;
+  background: #a2a2a2;
   margin-bottom: 10px;
   position: relative;
   cursor: pointer;
@@ -1163,7 +1172,7 @@ line-height: 24px;
   display: none;
 }
 .instagram-pic > span:before {
-  content: '';
+  content: "";
   height: 2px;
   width: 30px;
   background: #fff;
@@ -1176,7 +1185,6 @@ line-height: 24px;
 }
 .instagram-pic:hover span {
   display: block;
-
 }
 .copyright {
   display: flex;
@@ -1188,4 +1196,242 @@ line-height: 24px;
   color: #989898;
   opacity: 0.4;
   margin-top: 44px;
+}
+
+/*responsive*/
+
+
+@media (max-width: 1270px) {
+  .hero-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .hero:after {
+    height: 200px;
+  }
+  .hero-subtitle {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .btn-hero {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 14px 25px;
+  }
+  .header-logo {
+    margin-right: 30px;
+  }
+  .nav-link {
+    font-size: 12px;
+    line-height: 10px;
+  }
+  .btn-login {
+    border-radius: 100px;
+    padding: 10px 35px;
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .hero-pic, .experienc-pic {
+    width: 100%;
+    height: auto;
+  }
+  .price:before, .price:after {
+    height: 200px;
+  }
+}
+@media (max-width: 1070px) {
+  .container {
+    max-width: 900px;
+  }
+  .hero:after {
+    height: 150px;
+  }
+  .price:before, .price:after {
+    height: 150px;
+  }
+  .header {
+    padding: 0;
+  }
+  .logo-nav {
+    display: none;
+  }
+  .wrapper {
+    display: block;
+    position: absolute;
+    right: 20px;
+    bottom: -75px;
+    width: 40px;
+    height: 40px;
+  }
+  .burger {
+    width: 40px;
+    height: 5px;
+    background-color: #333333;
+    position: relative;
+  }
+  .burger:before {
+    position: absolute;
+    left: 0;
+    top: -10px;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #333333;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+  .burger:after {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    content: "";
+    display: block;
+    width: 40px;
+    height: 5px;
+    background-color: #333333;
+    transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+  }
+  .burger.burger_active {
+    background-color: transparent;
+  }
+  .burger.burger_active:before {
+    transform: rotate(45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+  .burger.burger_active:after {
+    transform: rotate(-45deg);
+    top: 0;
+    transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+  }
+  .main-wrapper {
+    position: relative;
+    overflow-y: hidden;
+  }
+  .nav-headrer {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    transition: 0.5s;
+    transform: translateY(-100%);
+    z-index: 99;
+  }
+  .nav-headrer-active {
+    transform: translateY(0%);
+  }
+  .header-section-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50%;
+    flex-direction: row;
+  }
+  .header-section-links a {
+    margin-right: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 900;
+  }
+  .content {
+    transition: 0.5s;
+    position: relative;
+  }
+  .content-active {
+    transform: translateY(2.5%);
+  }
+  .welcome-pic {
+    width: 50%;
+  }
+  .omg-section {
+    flex-direction: column;
+  }
+  .section-rates {
+    justify-content: center;
+    margin-right: 0px;
+    margin-bottom: 20px;
+  }
+  .rates-values {
+    text-align: center;
+  }
+  .experienc-pic {
+    width: 50%;
+  }
+}
+
+
+
+
+
+@media (max-width: 750px) {
+  .hero-title{
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .hero-description {
+    padding-top: 40px;
+    text-align: center;
+    flex-basis: 100%;
+    padding-bottom: 40px;
+  }
+  .hero-pic-section {
+    display: none;
+  }
+  .hero:after {
+    height: 150px;
+  }
+  .nav-headrer {
+    display: flex;
+    flex-direction: column;
+  }
+  .welcome {
+    padding-top: 0px;
+  }
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .welcome-description {
+    flex-basis: 100%;
+    text-align: center;
+  }
+  .welcome-title:after {
+    margin: 0 auto;
+  }
+  .price:before, .price:after {
+    height: 150px;
+  }
+  .section-rates {
+    flex-direction: column;
+  }
+  .rates-value {
+    align-items: center;
+  }
+  .experienc {
+    margin-top: 0px;
+  }
+  .experienc-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .experienc-description {
+    align-items: center;
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .experienc-pic {
+    display: none;
+  }
+  .experienc-text {
+    margin-right: 0px;
+  }
+  .experienc-title:after {
+    margin: 0 auto;
+  }
 }
