@@ -75,7 +75,7 @@ body {
   align-items: center;
   justify-content: space-between;
 }
-.wrapper  {
+.wrapper {
   display: none;
 }
 .header-section-links {
@@ -199,7 +199,7 @@ body {
   box-shadow: 0px 0px 15px 19px rgba(253, 116, 155, 0.57);
 }
 .hero {
-  background: linear-gradient(174.48deg, #FD749B -12.41%, #281AC8 88.56%);
+  background: linear-gradient(174.48deg, #fd749b -12.41%, #281ac8 88.56%);
   padding-top: 60px;
 }
 .hero:after {
@@ -309,7 +309,7 @@ body {
   cursor: pointer;
 }
 .price {
-  background: linear-gradient(174.48deg, #FD749B -12.41%, #281AC8 88.56%);
+  background: linear-gradient(174.48deg, #fd749b -12.41%, #281ac8 88.56%);
 }
 .price:after {
   content: "";
@@ -328,7 +328,7 @@ body {
 }
 
 .price-section {
-  padding: 50px ;
+  padding: 50px;
   background-color: #fff;
   box-shadow: 0px 50px 100px rgba(0, 0, 0, 0.25);
   border-radius: 30px;
@@ -815,7 +815,7 @@ body {
 }
 
 .chat {
-  background: linear-gradient(178.18deg, #FD749B -13.56%, #281AC8 158.3%);
+  background: linear-gradient(178.18deg, #fd749b -13.56%, #281ac8 158.3%);
 }
 .chat:after {
   content: "";
@@ -871,7 +871,7 @@ body {
   margin-bottom: 34px;
 }
 .chat-bubles {
-  background: url('image/bubbles.png') no-repeat center;
+  background: url("image/bubbles.png") no-repeat center;
   height: 390px;
   width: 100%;
   display: flex;
@@ -889,7 +889,6 @@ body {
   right: 80px;
   opacity: 0.5;
   position: absolute;
-
 }
 .triangle-bg-xxs,
 .triangle-bg-xxs:before,
@@ -1200,7 +1199,6 @@ footer {
 
 /*responsive*/
 
-
 @media (max-width: 1270px) {
   .hero-title {
     font-size: 30px;
@@ -1231,11 +1229,13 @@ footer {
     font-size: 14px;
     line-height: 21px;
   }
-  .hero-pic, .experienc-pic {
+  .hero-pic,
+  .experienc-pic {
     width: 100%;
     height: auto;
   }
-  .price:before, .price:after {
+  .price:before,
+  .price:after {
     height: 200px;
   }
 }
@@ -1246,7 +1246,8 @@ footer {
   .hero:after {
     height: 150px;
   }
-  .price:before, .price:after {
+  .price:before,
+  .price:after {
     height: 150px;
   }
   .header {
@@ -1362,14 +1363,16 @@ footer {
   .experienc-pic {
     width: 50%;
   }
+  .trade {
+    padding: 100px 0;
+  }
+  .chat:before {
+    height: 150px;
+  }
 }
 
-
-
-
-
 @media (max-width: 750px) {
-  .hero-title{
+  .hero-title {
     font-size: 25px;
     line-height: 30px;
   }
@@ -1403,7 +1406,8 @@ footer {
   .welcome-title:after {
     margin: 0 auto;
   }
-  .price:before, .price:after {
+  .price:before,
+  .price:after {
     height: 150px;
   }
   .section-rates {
@@ -1433,5 +1437,37 @@ footer {
   }
   .experienc-title:after {
     margin: 0 auto;
+  }
+  .trade {
+    padding: 100px 0;
+  }
+  .trade-title {
+    font-size: 24px;
+    line-height: 35px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .section-btn-trade {
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+  }
+  .btn-trade {
+    flex-basis: 100%;
+    margin-bottom: 0px;
+  }
+  .btn-trade-bitcoin {
+    margin-bottom: 30px;
+    margin-right: 0px;
+  }
+  .blog-section {
+    display: flex;
+    flex-direction: column;
+  }
+  .blog {
+    display: none;
+  }
+  .chat:before {
+    height: 150px;
   }
 }
